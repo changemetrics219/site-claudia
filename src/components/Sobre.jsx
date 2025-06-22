@@ -3,7 +3,7 @@ export default function Sobre() {
     <section id="sobre">
       <div className="sobre-claudia">
         <div className="foto-claudia">
-          <img src="/claudia.png" alt="Foto de Cláudia Carreira" className="foto" />
+          <img src="/site-claudia/claudia.png" alt="Foto de Cláudia Carreira" className="foto" />
         </div>
         <div className="texto-sobre">
           <h2>Sobre Mim</h2>
