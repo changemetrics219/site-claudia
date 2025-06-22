@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Geral */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+
+.menu-hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+    z-index: 9999; /* Coloca o ícone acima do conteúdo */
+  }
+
+.bar {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+} 
+nav {
+    display: none; /* Inicialmente o menu está escondido */
+    position: absolute;
+    top: 60px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    text-align: center;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    border-bottom: 1px solid #fff;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  nav ul li a:hover {
+    background-color: #444;
+  }
+  
+  /* Estilo para quando o menu estiver visível */
+  nav.show {
+    display: block;
+  }
+  
+  /* Responsividade para o menu */
+  @media screen and (min-width: 768px) {
+    .menu-hamburger {
+      display: none; /* Esconde o ícone de menu em telas maiores */
+    }
+  
+    nav {
+      display: flex;
+      position: static;
+      width: auto;
+    }
+  
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+  
+    nav ul li {
+      border: none;
+    }
+  
+    nav ul li a {
+      padding: 10px 20px;
+    }
+  }
+
+/* Seção de Introdução */
+#inicio {
+    background-color: #1A2B36;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#inicio h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#inicio .subtitulo {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#inicio .cta-button {
+    background-color: #ff9900;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#inicio .cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Seção de Serviços */
+#servicos {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+#servicos h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #1A2B36;
+}
+
+.servico {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servico h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.servico p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.servico .cta-button {
+    background-color: #ff9900;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.servico .cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Estilos gerais do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Seção Sobre a Cláudia */
+  .sobre-claudia {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha, se necessário */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+  }
+  
+  /* Estilos para a imagem */
+  .foto-claudia {
+    flex: 1; /* Permite que a imagem ocupe uma fração do espaço */
+    max-width: 300px; /* Limita a largura máxima da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    text-align: center;
+}
+
+.foto-claudia img {
+    width: 100%; /* A imagem ocupa toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+}
+  
+  /* Estilos para o texto */
+  .texto-sobre {
+    flex: 2; /* O texto ocupa duas vezes mais espaço que a imagem */
+    max-width: 600px; /* Limita a largura máxima do texto */
+    font-size: 1.2rem;
+    line-height: 1.6;/* Justifica o texto para melhor aparência */
+  }
+  
+  .texto-sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+  /* Media Query para telas menores que 768px (Responsivo) */
+  @media (max-width: 768px) {
+    .sobre-claudia {
+        flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    .foto-claudia {
+        max-width: 80%; /* Limita a largura da imagem em dispositivos menores */
+    }
+
+    .texto-sobre {
+        text-align: center; /* Centraliza o texto em dispositivos menores */
+    }
+}
+/* Seção de Testemunhos */
+#testemunhos {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#testemunhos h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1A2B36;
+    margin-bottom: 40px;
+}
+
+.testemunho {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testemunho strong {
+    font-size: 20px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 36px;
+    color: #1A2B36;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato form input,
+#contato form textarea {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato form button {
+    padding: 15px 30px;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato form button:hover {
+    background-color: #e68900;
+}
+
+/* Footer */
+footer {
+    background-color: #1A2B36;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Mobile Responsivo */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .servico {
+        padding: 15px;
+    }
+
+    #contato form {
+        padding: 10px;
+    }
+}
+#cursos {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#cursos h2 {
+    font-size: 36px;
+    color: #1A2B36;
+    margin-bottom: 20px;
+}
+
+#cursos .intro {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+#cursos .pilares ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#cursos .lista-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+#cursos .curso {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+#cursos .curso h3 {
+    color: #1A2B36;
+    margin-bottom: 10px;
+}
+
+#cursos .curso p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#cursos .cta-cursos ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#cursos .cta-cursos a.cta-button {
+    margin-top: 20px;
+    display: inline-block;
+}
